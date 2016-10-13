@@ -30,10 +30,13 @@ Multi-Button, click button change the state. 多功能按钮,点击变换状态.
       [btn addTarget:self action:@selector(timeDidClick) forControlEvents:UIControlEventTouchUpInside];
 
 * Style
-          
+       
       [btn setBackgroundImage:[UIImage imageNamed:@"xxx.png"]];
+      
       [btn setBackgroundColor:[UIColor orangeColor]];
+      
       [btn.titleLabel setFont:...];
+      
       [btn.detailLabel setFont:...];
       
- ### Screen
+### Screen
