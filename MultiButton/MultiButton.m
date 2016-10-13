@@ -31,7 +31,7 @@
         self.currentState = self.detailLabel.text;
     }else{
         self.listState = [state componentsSeparatedByString:@"|"];
-        self.count = self.listState.count;
+        self.count = (int)self.listState.count;
         [self.detailLabel setText:_listState[0]];
         self.currentState = self.detailLabel.text;
     }
