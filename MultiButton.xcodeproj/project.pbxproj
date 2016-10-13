@@ -13,6 +13,7 @@
 		6E9D67D21DAF4604006B9C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9D67D01DAF4604006B9C95 /* Main.storyboard */; };
 		6E9D67D41DAF4604006B9C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E9D67D31DAF4604006B9C95 /* Assets.xcassets */; };
 		6E9D67D71DAF4604006B9C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E9D67D51DAF4604006B9C95 /* LaunchScreen.storyboard */; };
+		6E9D67E01DAF460F006B9C95 /* MultiButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9D67DF1DAF460F006B9C95 /* MultiButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		6E9D67D31DAF4604006B9C95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E9D67D61DAF4604006B9C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E9D67D81DAF4604006B9C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E9D67DE1DAF460F006B9C95 /* MultiButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiButton.h; sourceTree = "<group>"; };
+		6E9D67DF1DAF460F006B9C95 /* MultiButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		6E9D67C61DAF4604006B9C95 /* MultiButton */ = {
 			isa = PBXGroup;
 			children = (
+				6E9D67DE1DAF460F006B9C95 /* MultiButton.h */,
+				6E9D67DF1DAF460F006B9C95 /* MultiButton.m */,
 				6E9D67CA1DAF4604006B9C95 /* AppDelegate.h */,
 				6E9D67CB1DAF4604006B9C95 /* AppDelegate.m */,
 				6E9D67CD1DAF4604006B9C95 /* ViewController.h */,
@@ -153,6 +158,7 @@
 				6E9D67CF1DAF4604006B9C95 /* ViewController.m in Sources */,
 				6E9D67CC1DAF4604006B9C95 /* AppDelegate.m in Sources */,
 				6E9D67C91DAF4604006B9C95 /* main.m in Sources */,
+				6E9D67E01DAF460F006B9C95 /* MultiButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
