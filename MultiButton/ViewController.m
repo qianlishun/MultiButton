@@ -18,14 +18,6 @@
 
 @implementation ViewController
 
-#import "MultiButton.h"
-
-MultiButton *btn = [[MultiButton alloc]initWithFrame:CGRectMake(0, 0, 200, 30)];
-btn.center = CGPointMake(self.view.center.x, 300);
-[btn setName:@"volume" state:@"11"];
-[self.view addSubview:btn];
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
