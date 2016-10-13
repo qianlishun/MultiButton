@@ -12,7 +12,7 @@ Multi-Button, click button change the state. 多功能按钮,点击变换状态.
       [btn setName:@"volume" state:@"11"];
       [self.view addSubview:btn];
 
-* the state set the numbers like this
+* the state set the numbers like this  The Screen button of line 1
 
 ②
 
@@ -21,7 +21,7 @@ Multi-Button, click button change the state. 多功能按钮,点击变换状态.
       [btn setName:@"volume" state:@"ON|OFF"];
       [self.view addSubview:btn];
       
-* the state set the @"sting1|string2|string3"  like this 
+* the state set the @"sting1|string2|string3"  like  The Screen button of line 1 and line 2
 
     
 
@@ -41,3 +41,4 @@ Multi-Button, click button change the state. 多功能按钮,点击变换状态.
       
 
 ### Screen
+ <img src="https://github.com/qianlishun/MultiButton/blob/master/QQ20161013-0@2x.png?raw=true" alt="" width="200" />
