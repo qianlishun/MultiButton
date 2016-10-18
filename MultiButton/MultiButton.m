@@ -50,7 +50,7 @@
         _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 60, 30)];
         
         _titleLabel.font = [UIFont systemFontOfSize:20];
-        _titleLabel.textAlignment = NSTextAlignmentRight;
+        _titleLabel.textAlignment = NSTextAlignmentLeft;
         [_titleLabel setTextColor:[UIColor grayColor]];
         
     }
@@ -61,7 +61,7 @@
     if (!_detailLabel) {
         _detailLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.frame.size.width - 60, 2, 60, 30)];
         _detailLabel.font = [UIFont systemFontOfSize:18];
-
+        _detailLabel.textAlignment = NSTextAlignmentRight;
         [_detailLabel setTextColor:[UIColor grayColor]];
  
         
@@ -120,7 +120,7 @@
     [_detailLabel sizeToFit];
     [self sizeToFit];
     _titleLabel.center = CGPointMake(_titleLabel.frame.size.width/2+5, self.frame.size.height/2);
-    _detailLabel.center = CGPointMake(self.frame.size.width - _titleLabel.frame.size.width/2 -10 , self.frame.size.height/2);
+    _detailLabel.center = CGPointMake(self.frame.size.width - _detailLabel.frame.size.width/2 -5 , self.frame.size.height/2);
 }
 
 @end
