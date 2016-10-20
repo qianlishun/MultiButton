@@ -111,7 +111,7 @@
 }
 
 -(NSInteger)tag{
-    return self.currentState.integerValue;
+    return self.theStateCount;
 }
 
 -(void)layoutSubviews{
