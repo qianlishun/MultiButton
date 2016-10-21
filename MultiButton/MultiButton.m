@@ -14,7 +14,7 @@
 
 @property (nonatomic,strong) NSArray *listState;
 
-@property (nonatomic,assign) int count;
+@property (nonatomic,assign) NSInteger count;
 
 
 @end
@@ -110,8 +110,8 @@
 
 }
 
--(NSInteger)tag{
-    return self.theStateCount;
+-(NSInteger)theCurrentState{
+    return theStateCount;
 }
 
 -(void)layoutSubviews{
