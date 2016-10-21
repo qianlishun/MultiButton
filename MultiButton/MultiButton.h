@@ -19,6 +19,6 @@
 
 /// 当前状态
 @property (nonatomic,copy) NSString* currentState;
-
+@property (nonatomic,assign) NSInteger  theCurrentState;
 
 @end
