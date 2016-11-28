@@ -21,4 +21,8 @@
 @property (nonatomic,copy) NSString* currentState;
 @property (nonatomic,assign) NSInteger  theCurrentState;
 
+@property (nonatomic,assign) BOOL isNotLocked;
+
+- (void)setStateStr:(NSString *)str;
+- (void)sendClick;
 @end
