@@ -9,7 +9,7 @@
 #import "MultiButton.h"
 
 @interface MultiButton(){
-    int theStateCount;
+    NSInteger theStateCount;
 }
 
 @property (nonatomic,strong) NSArray *listState;
@@ -31,7 +31,7 @@
         self.currentState = self.detailLabel.text;
     }else{
         self.listState = [state componentsSeparatedByString:@"|"];
-        self.count = (int)self.listState.count;
+        self.count = self.listState.count;
         [self.detailLabel setText:_listState[0]];
         self.currentState = self.detailLabel.text;
     }
@@ -64,7 +64,6 @@
         _detailLabel.textAlignment = NSTextAlignmentRight;
         [_detailLabel setTextColor:[UIColor grayColor]];
  
-        
     }
     return _detailLabel;
 }
@@ -79,6 +78,7 @@
         self.layer.cornerRadius = 5;
         self.layer.masksToBounds = YES;
         self.backgroundColor = [UIColor whiteColor];
+        self.isNotLocked = YES;
         
         self.listState = [NSArray array];
         
@@ -89,29 +89,53 @@
 
 - (void)endTrackingWithTouch:(nullable UITouch *)touch withEvent:(nullable UIEvent *)event{
 
-    
+    [self sendClick];
+}
+
+- (void)sendClick{
     if (theStateCount < self.count-1) {
         theStateCount++;
     }else if(theStateCount == self.count-1){
         theStateCount = 0;
     }
+    NSString *str;
     
     if (self.listState.count>1) {
-        _detailLabel.text = self.listState[theStateCount];
+        str = self.listState[theStateCount];
     }else{
-        _detailLabel.text = [NSString stringWithFormat:@"%d",theStateCount];
+        str = [NSString stringWithFormat:@"%zd",theStateCount];
     }
     
-    self.currentState = _detailLabel.text;
+    self.currentState = _detailLabel.text = str;
     
-    NSLog(@"%@",_detailLabel.text);
-    
+    //    NSLog(@"%@",_detailLabel.text);
     [self layoutSubviews];
-
 }
 
 -(NSInteger)theCurrentState{
     return theStateCount;
+}
+
+-(void)setTheCurrentState:(NSInteger)theCurrentState{
+    theStateCount = theCurrentState;
+    
+    NSString *str;
+    if (self.listState.count>1) {
+        str = self.listState[theStateCount];
+    }else{
+        str = [NSString stringWithFormat:@"%zd",theStateCount];
+    }
+    self.currentState = _detailLabel.text = str;
+}
+
+- (void)setStateStr:(NSString *)str{
+    for (int i=0; i<self.listState.count; i++) {
+        if ([str isEqualToString:self.listState[i]]) {
+            [self setTheCurrentState:i];
+            return;
+        }
+    }
+    _detailLabel.text = str;
 }
 
 -(void)layoutSubviews{
