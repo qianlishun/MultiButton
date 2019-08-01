@@ -25,7 +25,7 @@ Multi-Button, click button change the state. 多功能按钮,点击变换状态.
 
     
 
-* you also can addTarget
+* also you can addTarget
         
       [btn addTarget:self action:@selector(timeDidClick) forControlEvents:UIControlEventTouchUpInside];
 
@@ -38,7 +38,12 @@ Multi-Button, click button change the state. 多功能按钮,点击变换状态.
       [btn.titleLabel setFont:...];
       
       [btn.detailLabel setFont:...];
-      
+
+* state
+
+      btn.currentState : NSString , 按钮当前状态显示的内容
+          
+      btn.theCurrentState : NSInteger , 按钮的当前的状态编号 (0,1,2,3...)
 
 ### Screen
  <img src="https://github.com/qianlishun/MultiButton/blob/master/QQ20161013-0@2x.png?raw=true" alt="" width="200" />
